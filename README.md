@@ -75,31 +75,12 @@ python -m ResilienceEffort.cli --config examples/pareto_config.json --mode paret
 python -m ResilienceEffort.cli --config examples/resilience_config.json --mode resilience --epsilon 1.2 --plot
 ```
 
-### Config schema
-
-Common fields (all modes):
-```json
-{
-    "N": 6, "n": 2, "m": 2, "q": 4,
-    "A": [[1, 0], [0, 1]],
-    "B": [[1, 0], [0, 1]],
-    "x0": [0.0, 0.2],
-
-    "G": [[-1, 0], [1, 0], [0, -1], [0, 1]],
-    "safe_bounds": [-1.0, 1.7, 0.0, 2.0],
-    "region_bounds": {
-        "2": [-0.3, 0.3, 0.6, 1.25],
-        "4": [0.8, 1.5, 1.2, 1.75]
-    }
-}
-```
 
 Mode-specific fields:
 - **Effort mode**: add `"r": 0.068` (disturbance bound).
 - **Pareto mode**: add `"w": [0.02, 0.1]` (weights `[w_epsilon, w_mu]`).
 - **Resilience mode**: add `"epsilon": 0.93` (control-effort budget).
 
-`region_bounds` maps step index → `[xmin, xmax, ymin, ymax]`. Any step not listed defaults to `safe_bounds`.
 
 ## Project layout
 
