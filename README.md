@@ -118,6 +118,5 @@ BibTeX:
   title={Resilient and Effort-Optimal Controller Synthesis under Temporal Logic Specifications},
   author={  AitSi, Youssef and Das, Ratnangshu and Monir, Negar and Soudjani, Sadegh and Jagtap, Pushpak and Saoud, Adnane},
   journal={arXiv preprint arXiv:2604.10680},
-  year={2026}
-}
+  year={2026}}
 
