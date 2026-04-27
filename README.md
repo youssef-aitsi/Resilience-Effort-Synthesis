@@ -61,7 +61,7 @@ The package ships with a small CLI driven by a JSON config file. Choose between 
 
 ```bash
 # Effort mode (fixed mu, minimize epsilon)
-python -m ResilienceEffort.cli --config examples/config.json --plot --verbose
+python -m ResilienceEffort.cli --config examples/effort_config.json --plot --verbose
 
 # Pareto mode
 python -m ResilienceEffort.cli --config examples/pareto_config.json --mode pareto --plot
