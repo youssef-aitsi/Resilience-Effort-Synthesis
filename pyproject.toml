@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robust-mpc"
+version = "0.1.0"
+description = "Robust Model Predictive Control optimization with Pyomo."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Your Name" }]
+keywords = ["MPC", "robust control", "optimization", "pyomo"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "numpy>=1.21",
+    "matplotlib>=3.5",
+    "pyomo>=6.4",
+]
+
+[project.scripts]
+robust-mpc = "robust_mpc.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["robust_mpc*"]
